@@ -1,0 +1,633 @@
+No files changed, compilation skipped
+
+Ran 4 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.withdraw.t.sol:IODPMTestWithdraw
+[PASS] test_withdraw_revert_MarketIsOpen() (gas: 705331)
+[PASS] test_withdraw_revert_MarketIsVoided() (gas: 925045)
+[PASS] test_withdraw_revert_WithdrawalDelayPeriodNotPassed() (gas: 895128)
+[PASS] test_withdraw_success() (gas: 880369)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 5.10ms (3.81ms CPU time)
+
+Ran 3 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.collectVoidedFunds.token.t.sol:IODPMTestCollectVoidedFundsToken
+[PASS] test_collectVoidedFunds_revert_MarketIsOpen() (gas: 796610)
+[PASS] test_collectVoidedFunds_revert_NothingToPay() (gas: 901210)
+[PASS] test_collectVoidedFunds_success() (gas: 1413474)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 4.96ms (3.71ms CPU time)
+
+Ran 8 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.sell.t.sol:InfiniteOutcomeDPMTestSellShares
+[PASS] test_sellShares_multipleSellers() (gas: 1277148)
+[PASS] test_sellShares_reverts_InsufficientShares() (gas: 723393)
+[PASS] test_sellShares_reverts_InvalidSharesValue_cannotSellPositiveValues() (gas: 710136)
+[PASS] test_sellShares_reverts_MarketIsResolved() (gas: 866814)
+[PASS] test_sellShares_reverts_MarketIsVoided() (gas: 766145)
+[PASS] test_sellShares_reverts_NotFromOrderRouter() (gas: 700221)
+[PASS] test_sellShares_reverts_NothingToPay() (gas: 705679)
+[PASS] test_sellShares_singleSeller() (gas: 905924)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 5.35ms (4.07ms CPU time)
+
+Ran 12 tests for test/unit/OnitInfiniteOutcomeDPMProxyFactory/InfiniteOutcomeDPMProxyFactoryTest.t.sol:InfiniteOutcomeDPMProxyFactoryTest
+[PASS] test_cannotDeployIfAlreadyDeployed() (gas: 1041162685)
+[PASS] test_cannotSetImplementationIfNotOwner() (gas: 39823)
+[PASS] test_cannotSetOrderRouterIfNotOwner() (gas: 40185)
+[PASS] test_createFailsIfBadImplementation() (gas: 1202368)
+[PASS] test_createMarket() (gas: 866046)
+[PASS] test_createMarketWithERC20Token() (gas: 951982)
+[PASS] test_createMarketWithERC20TokenAndSeededFunds() (gas: 863617)
+[PASS] test_createMarketWithERC20Token_revert_InsufficientBalance() (gas: 399734)
+[PASS] test_createMarketWithSeededFunds() (gas: 728233)
+[PASS] test_predictMarketAddress() (gas: 15190)
+[PASS] test_setImplementation() (gas: 53675)
+[PASS] test_setOrderRouter() (gas: 54172)
+Suite result: ok. 12 passed; 0 failed; 0 skipped; finished in 5.67ms (4.08ms CPU time)
+
+Ran 4 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.updateResolution.t.sol:IODPMTestUpdateResolution
+[PASS] test_updateResolution_revert_DisputePeriodPassed() (gas: 898030)
+[PASS] test_updateResolution_revert_MarketIsOpen() (gas: 708297)
+[PASS] test_updateResolution_revert_MarketIsVoided() (gas: 927321)
+[PASS] test_updateResolution_success() (gas: 939873)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 2.84ms (1.42ms CPU time)
+
+Ran 7 tests for test/unit/OnitMarketOrderRouter/OnitMarketOrderRouter.executeMultipleOrders.t.sol:OnitMarketOrderRouterExecuteMultipleOrdersTest
+[PASS] test_executeMultipleOrders_nativeToken() (gas: 1886426)
+[PASS] test_executeMultipleOrders_reverts_MulticallOrdersMustUseSameToken() (gas: 1182231)
+[PASS] test_executeMultipleOrders_reverts_TransferFailed_insufficientAllowance() (gas: 84877)
+[PASS] test_executeMultipleOrders_reverts_invalidPermit() (gas: 94511)
+[PASS] test_executeMultipleOrders_withExistingAllowance() (gas: 762096)
+[PASS] test_executeMultipleOrders_withPermit_fromBuyer() (gas: 722069)
+[PASS] test_executeMultipleOrders_withPermit_fromRelayer() (gas: 724847)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 9.54ms (6.30ms CPU time)
+
+Ran 5 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.resolveMarket.t.sol:IODPMTestResolveMarket
+[PASS] testFuzz_resolveMarket(uint256,int256,int256) (runs: 10, μ: 936700, ~: 932987)
+[PASS] test_resolveMarket_revert_MarketIsResolved() (gas: 862045)
+[PASS] test_resolveMarket_revert_MarketIsVoided() (gas: 763830)
+[PASS] test_resolveMarket_revert_OnlyResolver() (gas: 699535)
+[PASS] test_resolveMarket_withSecondResolver() (gas: 937139)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 12.25ms (11.21ms CPU time)
+
+Ran 8 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.sell.token.t.sol:InfiniteOutcomeDPMTestSellSharesToken
+[PASS] test_sellShares_token_multipleSellers() (gas: 1475860)
+[PASS] test_sellShares_token_reverts_InsufficientShares() (gas: 854144)
+[PASS] test_sellShares_token_reverts_InvalidSharesValue_cannotSellPositiveValues() (gas: 852557)
+[PASS] test_sellShares_token_reverts_MarketIsResolved() (gas: 1016366)
+[PASS] test_sellShares_token_reverts_MarketIsVoided() (gas: 908148)
+[PASS] test_sellShares_token_reverts_NotFromOrderRouter() (gas: 830928)
+[PASS] test_sellShares_token_reverts_NothingToPay() (gas: 848122)
+[PASS] test_sellShares_token_singleSeller() (gas: 1057298)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 12.39ms (10.51ms CPU time)
+
+Ran 4 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.withdraw.token.t.sol:IODPMTestWithdrawToken
+[PASS] test_withdraw_revert_MarketIsOpen() (gas: 805450)
+[PASS] test_withdraw_revert_MarketIsVoided() (gas: 1032371)
+[PASS] test_withdraw_revert_WithdrawalDelayPeriodNotPassed() (gas: 1002373)
+[PASS] test_withdraw_success() (gas: 1021907)
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 8.46ms (4.73ms CPU time)
+
+Ran 6 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.withdrawMarketCreatorFees.t.sol:IODPMTestWithdrawMarketCreatorFees
+[PASS] test_cannotWithdrawMarketCreatorFeesTwice() (gas: 944327)
+[PASS] test_withdrawMarketCreatorFees() (gas: 960805)
+[PASS] test_withdrawMarketCreatorFees_afterWithdrawalDelayPeriod() (gas: 887795)
+[PASS] test_withdrawMarketCreatorFees_revert_MarketIsOpen() (gas: 698420)
+[PASS] test_withdrawMarketCreatorFees_revert_MarketIsVoided() (gas: 754294)
+[PASS] test_withdrawMarketCreatorFees_revert_WithdrawalDelayPeriodNotPassed() (gas: 877679)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 2.93ms (1.99ms CPU time)
+
+Ran 13 tests for test/unit/OnitMarketOrderRouter/OnitMarketOrderRouter.executeOrder.t.sol:OnitMarketOrderRouterExecuteOrderTest
+[PASS] test_executeOrder_nativeToken() (gas: 990892)
+[PASS] test_executeOrder_reverts_insufficientAllowance() (gas: 590358)
+[PASS] test_executeOrder_reverts_invalidPermit() (gas: 151894)
+[PASS] test_executeOrder_reverts_withExistingAllowance_ifNotFromBuyer() (gas: 74018)
+[PASS] test_executeOrder_withExistingAllowance_fromBuyer() (gas: 720960)
+[PASS] test_executeOrder_withPermit_fromBuyer() (gas: 436800)
+[PASS] test_executeOrder_withPermit_fromRelayer() (gas: 439336)
+[PASS] test_executeSellOrder_emitsEvent() (gas: 493751)
+[PASS] test_executeSellOrder_partialSell() (gas: 525965)
+[PASS] test_executeSellOrder_reverts_invalidSeller() (gas: 405690)
+[PASS] test_executeSellOrder_reverts_invalidSharesValue() (gas: 425163)
+[PASS] test_executeSellOrder_reverts_nothingToPay() (gas: 56831)
+[PASS] test_executeSellOrder_singleSeller() (gas: 615754)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 8.39ms (6.96ms CPU time)
+
+Ran 6 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.withdrawMarketCreatorFees.token.t.sol:IODPMTestWithdrawMarketCreatorFeesToken
+[PASS] test_withdrawMarketCreatorFees_afterDelayPeriod() (gas: 1003996)
+[PASS] test_withdrawMarketCreatorFees_cannotWithdrawTwice() (gas: 1087742)
+[PASS] test_withdrawMarketCreatorFees_revert_MarketIsOpen() (gas: 798512)
+[PASS] test_withdrawMarketCreatorFees_revert_MarketIsVoided() (gas: 854298)
+[PASS] test_withdrawMarketCreatorFees_revert_WithdrawalDelayPeriodNotPassed() (gas: 986360)
+[PASS] test_withdrawMarketCreatorFees_success() (gas: 1082694)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 7.51ms (6.47ms CPU time)
+
+Ran 7 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.withdrawProtocolFees.t.sol:IODPMTestWithdrawProtocolFees
+[PASS] test_withdrawFees() (gas: 894925)
+[PASS] test_withdrawProtocolFees_afterDelayPeriod() (gas: 891313)
+[PASS] test_withdrawProtocolFees_cannotWithdrawTwice() (gas: 941536)
+[PASS] test_withdrawProtocolFees_revert_MarketIsOpen() (gas: 708181)
+[PASS] test_withdrawProtocolFees_revert_MarketIsVoided() (gas: 761696)
+[PASS] test_withdrawProtocolFees_revert_NotOwner() (gas: 702219)
+[PASS] test_withdrawProtocolFees_revert_WithdrawalDelayPeriodNotPassed() (gas: 885018)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 3.40ms (2.46ms CPU time)
+
+Ran 6 tests for test/unit/OnitMarketOrderRouter/OnitMarketOrderRouter.executeOrderFromAllowance.t.sol:OnitMarketOrderRouterExecuteOrderFromAllowanceTest
+[PASS] test_executeOrderFromAllowance_asMarketAdmin() (gas: 441174)
+[PASS] test_executeOrderFromAllowance_reverts_insufficientAllowance() (gas: 70482)
+[PASS] test_executeOrderFromAllowance_reverts_invalidSpender() (gas: 65134)
+[PASS] test_executeOrderFromAllowance_usingBothAllowances() (gas: 664397)
+[PASS] test_executeOrderFromAllowance_usingMarketAllowance() (gas: 477368)
+[PASS] test_executeOrderFromAllowance_usingTokenAllowance() (gas: 566427)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 8.19ms (3.93ms CPU time)
+
+Ran 11 tests for test/unit/OnitMarketOrderRouter/OnitMarketOrderRouter.initializeOrderRouterForMarket.t.sol:OnitMarketOrderRouterInitializeOrderRouterForMarketTest
+[PASS] testFuzz_initializeOrderRouterForMarket_nonPermit(uint128,uint64,uint32) (runs: 10, μ: 301085, ~: 302915)
+[PASS] test_initializeOrderRouterForMarket_mixedFlow_permitWithExistingReserved() (gas: 344470)
+[PASS] test_initializeOrderRouterForMarket_nonPermit_emitsEvent() (gas: 226807)
+[PASS] test_initializeOrderRouterForMarket_nonPermit_partialReservedAllowance() (gas: 264075)
+[PASS] test_initializeOrderRouterForMarket_nonPermit_reverts_insufficientAllowance() (gas: 190641)
+[PASS] test_initializeOrderRouterForMarket_nonPermit_reverts_noReservedAllowance() (gas: 99989)
+[PASS] test_initializeOrderRouterForMarket_nonPermit_withReservedAllowance() (gas: 365650)
+[PASS] test_initializeOrderRouterForMarket_nonPermit_withSpenderAllowances() (gas: 324333)
+[PASS] test_initializeOrderRouterForMarket_reverts_negativeAllowanceChange() (gas: 89907)
+[PASS] test_initializeOrderRouterForMarket_withPermit_successful() (gas: 323398)
+[PASS] test_initializeOrderRouterForMarket_withPermit_zeroAllowances() (gas: 193378)
+Suite result: ok. 11 passed; 0 failed; 0 skipped; finished in 10.50ms (9.86ms CPU time)
+
+Ran 9 tests for test/unit/OnitMarketOrderRouter/OnitMarketOrderRouter.reserveAllowanceForDeployment.t.sol:OnitMarketOrderRouterReserveAllowanceForDeploymentTest
+[PASS] testFuzz_reserveAllowanceForDeployment(uint256) (runs: 10, μ: 69468, ~: 69402)
+[PASS] test_reserveAllowanceForDeployment_differentMarkets() (gas: 121268)
+[PASS] test_reserveAllowanceForDeployment_differentUsers() (gas: 120090)
+[PASS] test_reserveAllowanceForDeployment_emitsEvent() (gas: 62387)
+[PASS] test_reserveAllowanceForDeployment_integrationWithInit() (gas: 282669)
+[PASS] test_reserveAllowanceForDeployment_overwritesExisting() (gas: 109349)
+[PASS] test_reserveAllowanceForDeployment_reverts_InsufficientAllowance() (gas: 188539)
+[PASS] test_reserveAllowanceForDeployment_successful() (gas: 76262)
+[PASS] test_reserveAllowanceForDeployment_zeroAmount() (gas: 99446)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 4.31ms (3.20ms CPU time)
+
+Ran 7 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.withdrawProtocolFees.token.t.sol:IODPMTestWithdrawProtocolFeesToken
+[PASS] test_withdrawProtocolFees_afterDelayPeriod() (gas: 1025630)
+[PASS] test_withdrawProtocolFees_cannotWithdrawTwice() (gas: 1114406)
+[PASS] test_withdrawProtocolFees_revert_MarketIsOpen() (gas: 808301)
+[PASS] test_withdrawProtocolFees_revert_MarketIsVoided() (gas: 861700)
+[PASS] test_withdrawProtocolFees_revert_OnlyFactoryOwner() (gas: 802259)
+[PASS] test_withdrawProtocolFees_revert_WithdrawalDelayPeriodNotPassed() (gas: 993743)
+[PASS] test_withdrawProtocolFees_success() (gas: 1051563)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 7.37ms (6.31ms CPU time)
+
+Ran 16 tests for test/unit/OnitInfiniteOutcomeDPMOutcomeDomain/OnitInfiniteOutcomeDPMOutcomeDomain.t.sol:OnitInfiniteOutcomeDPMOutcomeDomainTest
+[PASS] test_bucketIdToPackedPosition_negative() (gas: 22519)
+[PASS] test_bucketIdToPackedPosition_positive() (gas: 22063)
+[PASS] test_getBalanceOfShares() (gas: 157092)
+[PASS] test_getBucketId_boundaries() (gas: 37260)
+[PASS] test_getBucketId_negative() (gas: 49799)
+[PASS] test_getBucketId_positive() (gas: 49635)
+[PASS] test_getBucketOutstandingShares() (gas: 155824)
+[PASS] test_getOutstandingSharesInBucketRange() (gas: 140795)
+[PASS] test_getOutstandingSharesInBucketRange_reversed() (gas: 140840)
+[PASS] test_updateHoldings_nonSequential() (gas: 161183)
+[PASS] test_updateHoldings_reduce() (gas: 213717)
+[PASS] test_updateHoldings_revert_BucketSharesOverflow_3Consecutive() (gas: 299555)
+[PASS] test_updateHoldings_revert_BucketSharesOverflow_nonConsecutive() (gas: 310103)
+[PASS] test_updateHoldings_revert_InsufficientShares_3Consecutive() (gas: 114580)
+[PASS] test_updateHoldings_revert_InsufficientShares_nonConsecutive() (gas: 108560)
+[PASS] test_updateHoldings_sequential() (gas: 115442)
+Suite result: ok. 16 passed; 0 failed; 0 skipped; finished in 5.98ms (5.07ms CPU time)
+
+Ran 8 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.collectVoidedFunds.t.sol:IODPMTestCollectVoidedFunds
+[PASS] testFuzz_collectVoidedFunds_multiplePartialSells(uint8,uint256,uint8) (runs: 10, μ: 1810371, ~: 1804395)
+[PASS] testFuzz_collectVoidedFunds_withProfitableSells(uint256,uint8,int256,uint8) (runs: 10, μ: 1839636, ~: 1535287)
+[PASS] test_collectVoidedFunds() (gas: 1195207)
+[PASS] test_collectVoidedFunds_proportionalDistribution() (gas: 1468744)
+[PASS] test_collectVoidedFunds_reentrant() (gas: 1723142)
+[PASS] test_collectVoidedFunds_revert_MarketIsOpen() (gas: 696711)
+[PASS] test_collectVoidedFunds_revert_NothingToPay() (gas: 797417)
+[PASS] test_collectVoidedFunds_withProfitableSells() (gas: 1696261)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 56.44ms (62.52ms CPU time)
+
+Ran 11 tests for test/unit/OnitMarketResolver/ResolverTest.t.sol:ResolverTest
+[PASS] test_canUpdateOutcomeWithinDisputePeriod() (gas: 165136)
+[PASS] test_cannotInitializeWithEmptyResolvers() (gas: 636316)
+[PASS] test_cannotInitializeWithZeroFactory() (gas: 636289)
+[PASS] test_cannotInitializeWithZeroResolver() (gas: 636918)
+[PASS] test_cannotResolveVoidedMarket() (gas: 96115)
+[PASS] test_cannotSetOutcomeTwice() (gas: 134612)
+[PASS] test_cannotUpdateOutcomeAfterDisputePeriod() (gas: 148710)
+[PASS] test_cannotUpdateUnresolvedMarket() (gas: 39440)
+[PASS] test_initialization() (gas: 53600)
+[PASS] test_onlyFactoryOwnerCanVoidMarket() (gas: 100572)
+[PASS] test_onlyResolverCanSetOutcome() (gas: 148495)
+Suite result: ok. 11 passed; 0 failed; 0 skipped; finished in 39.97ms (442.96µs CPU time)
+
+Ran 13 tests for test/unit/OnitMarketOrderRouter/OnitMarketOrderRouter.setAllowances.t.sol:OnitMarketOrderRouterSetAllowancesTest
+[PASS] testFuzz_setAllowances_internal(uint8,uint64) (runs: 10, μ: 2508786, ~: 2637780)
+[PASS] test_initializeorderRouterForMarket() (gas: 340246)
+[PASS] test_setAllowances_decreaseAllowances() (gas: 417231)
+[PASS] test_setAllowances_increaseAllowances() (gas: 407793)
+[PASS] test_setAllowances_increaseAndDecreaseAllowances() (gas: 463507)
+[PASS] test_setAllowances_internal() (gas: 113141)
+[PASS] test_setAllowances_internal_reverts_AmountTooLarge() (gas: 46234)
+[PASS] test_setAllowances_internal_reverts_ArrayLengthMismatch() (gas: 39177)
+[PASS] test_setAllowances_internal_updatesExistingAllowances() (gas: 589289)
+[PASS] test_setAllowances_reverts_notFromAdmin() (gas: 361633)
+[PASS] test_setAllowances_tokenSpecific() (gas: 451955)
+[PASS] test_setAllowances_withoutSignature() (gas: 392958)
+[PASS] test_setAllowances_withoutSignature_reverts_InvalidAllowanceSpender() (gas: 324922)
+Suite result: ok. 13 passed; 0 failed; 0 skipped; finished in 42.29ms (51.16ms CPU time)
+
+Ran 15 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.market.t.sol:InfiniteOutcomeDPMTestMarket
+[PASS] test_cannotSendEthToContract() (gas: 704331)
+[PASS] test_initialMarket_reverts_AlreadyInitialized() (gas: 4250402)
+[PASS] test_initialMarket_reverts_BetValueOutOfBounds_aboveMaxBetSize() (gas: 150149)
+[PASS] test_initialMarket_reverts_BetValueOutOfBounds_belowMinBetSize() (gas: 150345)
+[PASS] test_initialMarket_reverts_BettingCutoffOutOfBounds_inThePast() (gas: 150766)
+[PASS] test_initialMarket_reverts_MarketCreatorCommissionBpOutOfBounds() (gas: 150867)
+[PASS] test_initialMarket_token_reverts_BucketIdsNotStrictlyIncreasing() (gas: 14260643)
+[PASS] test_initializeMarket(uint256,uint256,uint256,int256) (runs: 10, μ: 5035768, ~: 5452688)
+[PASS] test_initializeMarket_noBettingCutoff() (gas: 685138)
+[PASS] test_updateBettingCutoff() (gas: 972094)
+[PASS] test_updateBettingCutoff_reverts_NotOwner() (gas: 703177)
+[PASS] test_updateTokenUri() (gas: 731008)
+[PASS] test_updateTokenUri_reverts_NotOwner() (gas: 703067)
+[PASS] test_voidMarket() (gas: 731928)
+[PASS] test_voidMarket_reverts_NotOwner() (gas: 702231)
+Suite result: ok. 15 passed; 0 failed; 0 skipped; finished in 151.56ms (153.45ms CPU time)
+
+Ran 14 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.market.token.t.sol:InfiniteOutcomeDPMTokenTestMarketToken
+[PASS] test_initialMarket_reverts_AlreadyInitialized() (gas: 4251638)
+[PASS] test_initialMarket_reverts_BetValueOutOfBounds_aboveMaxBetSize() (gas: 147812)
+[PASS] test_initialMarket_reverts_BetValueOutOfBounds_belowMinBetSize() (gas: 148016)
+[PASS] test_initialMarket_reverts_BettingCutoffOutOfBounds_inThePast() (gas: 148437)
+[PASS] test_initialMarket_reverts_BucketIdsNotStrictlyIncreasing() (gas: 14475610)
+[PASS] test_initialMarket_reverts_MarketCreatorCommissionBpOutOfBounds() (gas: 148538)
+[PASS] test_initializeMarket(uint256,uint256,uint256,int256) (runs: 10, μ: 6666644, ~: 6669382)
+[PASS] test_initializeMarket_noBettingCutoff() (gas: 685040)
+[PASS] test_updateBettingCutoff() (gas: 1155867)
+[PASS] test_updateBettingCutoff_reverts_NotOwner() (gas: 701808)
+[PASS] test_updateTokenUri() (gas: 729606)
+[PASS] test_updateTokenUri_reverts_NotOwner() (gas: 701665)
+[PASS] test_voidMarket() (gas: 730526)
+[PASS] test_voidMarket_reverts_NotOwner() (gas: 700807)
+Suite result: ok. 14 passed; 0 failed; 0 skipped; finished in 196.12ms (201.02ms CPU time)
+
+Ran 14 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.buyShares.token.t.sol:IODPMTestBuySharesToken
+[PASS] testFuzz_buyShares_token(uint256) (runs: 10, μ: 50457621, ~: 49664016)
+[PASS] test_buyShares_single() (gas: 1107249)
+[PASS] test_buyShares_token_revert_BucketSharesOverflow() (gas: 1215329)
+[PASS] test_buyShares_token_reverts_BetValueOutOfBounds_aboveMaxBetSize() (gas: 837437)
+[PASS] test_buyShares_token_reverts_BetValueOutOfBounds_belowMinBetSize() (gas: 835258)
+[PASS] test_buyShares_token_reverts_BetValueOutOfBounds_noValues() (gas: 827933)
+[PASS] test_buyShares_token_reverts_BettingCutoffPassed() (gas: 848662)
+[PASS] test_buyShares_token_reverts_BucketIdsNotStrictlyIncreasing() (gas: 874697)
+[PASS] test_buyShares_token_reverts_IncorrectBetValue() (gas: 904104)
+[PASS] test_buyShares_token_reverts_IncorrectBetValue_negativeCostDiff() (gas: 803199)
+[PASS] test_buyShares_token_reverts_MarketIsResolved() (gas: 994560)
+[PASS] test_buyShares_token_reverts_MarketIsVoided() (gas: 886229)
+[PASS] test_buyShares_token_reverts_NotFromOrderRouter() (gas: 822810)
+[PASS] test_buyShares_token_sameTrader_multiplePredictions() (gas: 4259014)
+Suite result: ok. 14 passed; 0 failed; 0 skipped; finished in 1.41s (1.43s CPU time)
+
+Ran 15 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.buyShares.t.sol:IODPMTestBuyShares
+[PASS] testFuzz_buyShares(uint256) (runs: 10, μ: 54413742, ~: 51954874)
+[PASS] test_buyShares_revert_BucketSharesOverflow() (gas: 1094774)
+[PASS] test_buyShares_reverts_BetValueOutOfBounds_aboveMaxBetSize() (gas: 722145)
+[PASS] test_buyShares_reverts_BetValueOutOfBounds_belowMinBetSize() (gas: 720362)
+[PASS] test_buyShares_reverts_BetValueOutOfBounds_noValuePassedToNativeMarket() (gas: 712885)
+[PASS] test_buyShares_reverts_BetValueOutOfBounds_noValues() (gas: 709931)
+[PASS] test_buyShares_reverts_BettingCutoffPassed() (gas: 725699)
+[PASS] test_buyShares_reverts_BucketIdsNotStrictlyIncreasing() (gas: 730395)
+[PASS] test_buyShares_reverts_IncorrectBetValue() (gas: 740356)
+[PASS] test_buyShares_reverts_IncorrectBetValue_negativeCostDiff() (gas: 707231)
+[PASS] test_buyShares_reverts_MarketIsResolved() (gas: 865414)
+[PASS] test_buyShares_reverts_NotFromOrderRouter() (gas: 680468)
+[PASS] test_buyShares_reverts_marketIsVoided() (gas: 764031)
+[PASS] test_buyShares_sameTrader_multiplePredictions() (gas: 4164415)
+[PASS] test_buyShares_singlePrediction() (gas: 4029981)
+Suite result: ok. 15 passed; 0 failed; 0 skipped; finished in 1.58s (1.62s CPU time)
+
+Ran 9 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.collectPayout.t.sol:IODPMTestCollectPayout
+[PASS] testFuzz_collectPayouts(uint256) (runs: 10, μ: 127851995, ~: 127530477)
+[PASS] test_collectPayout_multiplePayouts() (gas: 4256536)
+[PASS] test_collectPayout_reentrant() (gas: 1884759)
+[PASS] test_collectPayout_revert_MarketIsOpen() (gas: 696235)
+[PASS] test_collectPayout_revert_MarketIsVoided() (gas: 936873)
+[PASS] test_collectPayout_revert_NothingToPay_alreadyPaid() (gas: 941436)
+[PASS] test_collectPayout_revert_NothingToPay_losingBet() (gas: 890386)
+[PASS] test_collectPayout_revert_WithdrawalDelayPeriodNotPassed() (gas: 895535)
+[PASS] test_collectPayout_sameBets() (gas: 10890587)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 3.97s (4.02s CPU time)
+
+Ran 9 tests for test/unit/OnitInfiniteOutcomeDPM/MarketTest.collectPayout.token.t.sol:IODPMTestCollectPayoutToken
+[PASS] testFuzz_collectPayouts_token(uint256) (runs: 10, μ: 139475497, ~: 139420979)
+[PASS] test_collectPayout_multiplePayouts_token() (gas: 4392990)
+[PASS] test_collectPayout_revert_MarketIsOpen_token() (gas: 796885)
+[PASS] test_collectPayout_revert_MarketIsVoided_token() (gas: 1044263)
+[PASS] test_collectPayout_revert_NothingToPay_alreadyPaid_token() (gas: 1054926)
+[PASS] test_collectPayout_revert_NothingToPay_losingBet_token() (gas: 998519)
+[PASS] test_collectPayout_revert_WithdrawalDelayPeriodNotPassed_token() (gas: 1003813)
+[PASS] test_collectPayout_sameBets_token() (gas: 34426590)
+[PASS] test_collectPayout_withSeededFunds_token() (gas: 1511745)
+Suite result: ok. 9 passed; 0 failed; 0 skipped; finished in 4.49s (4.60s CPU time)
+
+╭----------------------------------------------------------------+-----------------+---------+---------+---------+---------╮
+| src/OnitInfiniteOutcomeDPM.sol:OnitInfiniteOutcomeDPM Contract |                 |         |         |         |         |
++==========================================================================================================================+
+| Deployment Cost                                                | Deployment Size |         |         |         |         |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| 4139108                                                        | 19037           |         |         |         |         |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+|                                                                |                 |         |         |         |         |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| Function Name                                                  | Min             | Avg     | Median  | Max     | # Calls |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| PROTOCOL_COMMISSION_BP                                         | 1270            | 1270    | 1270    | 1270    | 32      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| balanceOf                                                      | 2427            | 2427    | 2427    | 2427    | 632     |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| bettingCutoff                                                  | 3452            | 3452    | 3452    | 3452    | 24      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| bucketOutstandingPackedShares                                  | 3232            | 3232    | 3232    | 3232    | 12      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| buyShares                                                      | 4211            | 1414701 | 1445353 | 3656928 | 1501    |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| calculateCostOfTrade                                           | 10313           | 241893  | 263962  | 475887  | 1492    |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| calculatePayout                                                | 10814           | 10814   | 10814   | 10814   | 1001    |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| collectPayout                                                  | 2740            | 47649   | 51301   | 54277   | 600     |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| collectVoidedFunds                                             | 967             | 42296   | 44879   | 51884   | 98      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| getBalance                                                     | 2542            | 2542    | 2542    | 2542    | 10      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| getBalanceOfShares                                             | 3007            | 3007    | 3007    | 3007    | 2570    |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| getBucketOutstandingShares                                     | 2755            | 2755    | 2755    | 2871    | 2184    |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| initialize                                                     | 7301            | 966133  | 661384  | 3848803 | 270     |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| isResolver                                                     | 5463            | 5463    | 5463    | 5463    | 22      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| kappa                                                          | 2987            | 2987    | 2987    | 2987    | 63      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| marketCreatorCommissionBp                                      | 3034            | 3034    | 3034    | 3034    | 30      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| marketCreatorFee                                               | 2525            | 2525    | 2525    | 2525    | 18      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| marketCreatorFeeReceiver                                       | 2917            | 2917    | 2917    | 2917    | 20      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| marketQuestion                                                 | 2961            | 2961    | 2961    | 2961    | 26      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| marketVoided                                                   | 3618            | 3618    | 3618    | 3618    | 2       |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| maxBetSize                                                     | 2767            | 2767    | 2767    | 2767    | 10      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| minBetSize                                                     | 2943            | 2943    | 2943    | 2943    | 10      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| nextNftTokenId                                                 | 3474            | 3474    | 3474    | 3474    | 422     |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| onitFactory                                                    | 1404            | 1561    | 1404    | 3404    | 279     |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| outcomeUnit                                                    | 3320            | 3320    | 3320    | 3320    | 22      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| protocolFee                                                    | 3298            | 3298    | 3298    | 3298    | 16      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| receive                                                        | 80              | 80      | 80      | 80      | 1       |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| resolveMarket                                                  | 5552            | 140652  | 146016  | 158664  | 78      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| resolvedAtTimestamp                                            | 2789            | 2789    | 2789    | 2789    | 12      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| resolvedBucketId                                               | 3430            | 3430    | 3430    | 3430    | 12      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| resolvedOutcome                                                | 2503            | 2503    | 2503    | 2503    | 23      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| sellShares                                                     | 3708            | 39344   | 57629   | 63828   | 34      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| setUri                                                         | 8880            | 12609   | 12609   | 16338   | 4       |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| totalOpenStake                                                 | 3056            | 3056    | 3056    | 3056    | 105     |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| totalPayout                                                    | 2745            | 2745    | 2745    | 2745    | 15      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| totalQSquared                                                  | 3078            | 3078    | 3078    | 3078    | 428     |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| tradersStake                                                   | 7185            | 7185    | 7185    | 7185    | 554     |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| updateBettingCutoff                                            | 8686            | 18403   | 14712   | 31812   | 6       |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| updateResolution                                               | 12545           | 18000   | 15788   | 27880   | 4       |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| uri                                                            | 3411            | 3413    | 3414    | 3414    | 26      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| voidMarket                                                     | 8213            | 30320   | 31349   | 31349   | 45      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| winningBucketSharesAtClose                                     | 2635            | 2635    | 2635    | 2635    | 10      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| withdraw                                                       | 10137           | 18682   | 13420   | 50997   | 8       |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| withdrawMarketCreatorFees                                      | 2930            | 18766   | 17970   | 52470   | 14      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| withdrawProtocolFees                                           | 7979            | 24780   | 17433   | 55554   | 16      |
+|----------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| withdrawlDelayPeriod                                           | 2481            | 2481    | 2481    | 2481    | 35      |
+╰----------------------------------------------------------------+-----------------+---------+---------+---------+---------╯
+
+╭----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------╮
+| src/OnitInfiniteOutcomeDPMProxyFactory.sol:OnitInfiniteOutcomeDPMProxyFactory Contract |                 |         |        |            |         |
++====================================================================================================================================================+
+| Deployment Cost                                                                        | Deployment Size |         |        |            |         |
+|----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------|
+| 1031230                                                                                | 4616            |         |        |            |         |
+|----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------|
+|                                                                                        |                 |         |        |            |         |
+|----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------|
+| Function Name                                                                          | Min             | Avg     | Median | Max        | # Calls |
+|----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------|
+| createMarket                                                                           | 91072           | 4951449 | 731282 | 1039758887 | 268     |
+|----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------|
+| implementation                                                                         | 2331            | 2331    | 2331   | 2331       | 2       |
+|----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------|
+| orderRouter                                                                            | 2420            | 2420    | 2420   | 2420       | 3       |
+|----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------|
+| owner                                                                                  | 379             | 2332    | 2379   | 2379       | 86      |
+|----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------|
+| predictMarketAddress                                                                   | 3590            | 3590    | 3590   | 3590       | 1       |
+|----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------|
+| setImplementation                                                                      | 23747           | 26767   | 26767  | 29787      | 2       |
+|----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------|
+| setOrderRouter                                                                         | 23571           | 26592   | 26592  | 29613      | 2       |
+╰----------------------------------------------------------------------------------------+-----------------+---------+--------+------------+---------╯
+
+╭-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------╮
+| src/order-manager/OnitMarketOrderRouter.v2.sol:OnitMarketOrderRouter Contract |                 |         |         |         |         |
++=========================================================================================================================================+
+| Deployment Cost                                                               | Deployment Size |         |         |         |         |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| 1692914                                                                       | 7661            |         |         |         |         |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+|                                                                               |                 |         |         |         |         |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| Function Name                                                                 | Min             | Avg     | Median  | Max     | # Calls |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| allowances                                                                    | 2857            | 2857    | 2857    | 2857    | 95      |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| executeMultipleOrders                                                         | 40019           | 304069  | 468427  | 519957  | 7       |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| executeOrder                                                                  | 35970           | 1677087 | 1701741 | 2616148 | 516     |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| executeOrderFromAllowance                                                     | 29852           | 190306  | 267867  | 271006  | 6       |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| executeSellOrder                                                              | 24427           | 66409   | 70441   | 98449   | 6       |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| initializeOrderRouterForMarket                                                | 70376           | 156885  | 159185  | 213297  | 38      |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| marketDetails                                                                 | 4695            | 4695    | 4695    | 4695    | 6       |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| reserveAllowanceForDeployment                                                 | 24767           | 45721   | 46739   | 46859   | 38      |
+|-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------|
+| setAllowances                                                                 | 47665           | 73112   | 75087   | 105475  | 10      |
+╰-------------------------------------------------------------------------------+-----------------+---------+---------+---------+---------╯
+
+╭-----------------------------------------------------------------------------+-----------------+---------+--------+---------+---------╮
+| test/config/OrderRouterTestBase.t.sol:OnitMarketOrderRouterHarness Contract |                 |         |        |         |         |
++======================================================================================================================================+
+| Deployment Cost                                                             | Deployment Size |         |        |         |         |
+|-----------------------------------------------------------------------------+-----------------+---------+--------+---------+---------|
+| 1761308                                                                     | 7971            |         |        |         |         |
+|-----------------------------------------------------------------------------+-----------------+---------+--------+---------+---------|
+|                                                                             |                 |         |        |         |         |
+|-----------------------------------------------------------------------------+-----------------+---------+--------+---------+---------|
+| Function Name                                                               | Min             | Avg     | Median | Max     | # Calls |
+|-----------------------------------------------------------------------------+-----------------+---------+--------+---------+---------|
+| allowances                                                                  | 2944            | 2944    | 2944   | 2944    | 859     |
+|-----------------------------------------------------------------------------+-----------------+---------+--------+---------+---------|
+| setAllowances                                                               | 25210           | 1259286 | 316834 | 4942860 | 15      |
+╰-----------------------------------------------------------------------------+-----------------+---------+--------+---------+---------╯
+
+╭---------------------------------------------+-----------------+-------+--------+-------+---------╮
+| test/mocks/MockErc20.sol:MockErc20 Contract |                 |       |        |       |         |
++==================================================================================================+
+| Deployment Cost                             | Deployment Size |       |        |       |         |
+|---------------------------------------------+-----------------+-------+--------+-------+---------|
+| 746064                                      | 4003            |       |        |       |         |
+|---------------------------------------------+-----------------+-------+--------+-------+---------|
+|                                             |                 |       |        |       |         |
+|---------------------------------------------+-----------------+-------+--------+-------+---------|
+| Function Name                               | Min             | Avg   | Median | Max   | # Calls |
+|---------------------------------------------+-----------------+-------+--------+-------+---------|
+| DOMAIN_SEPARATOR                            | 2885            | 2885  | 2885   | 2885  | 647     |
+|---------------------------------------------+-----------------+-------+--------+-------+---------|
+| allowance                                   | 2780            | 2780  | 2780   | 2780  | 153     |
+|---------------------------------------------+-----------------+-------+--------+-------+---------|
+| approve                                     | 45869           | 45888 | 45887  | 45905 | 20      |
+|---------------------------------------------+-----------------+-------+--------+-------+---------|
+| balanceOf                                   | 2517            | 2517  | 2517   | 2517  | 978     |
+|---------------------------------------------+-----------------+-------+--------+-------+---------|
+| mint                                        | 33846           | 54934 | 50958  | 68058 | 1032    |
+|---------------------------------------------+-----------------+-------+--------+-------+---------|
+| nonces                                      | 2539            | 2539  | 2539   | 2539  | 647     |
+|---------------------------------------------+-----------------+-------+--------+-------+---------|
+| transfer                                    | 46101           | 46101 | 46101  | 46101 | 1       |
+╰---------------------------------------------+-----------------+-------+--------+-------+---------╯
+
+╭------------------------------------------------------------------------------------+-----------------+--------+--------+--------+---------╮
+| test/unit/OnitInfiniteOutcomeDPM/MarketTest.buyShares.token.t.sol:Wrapper Contract |                 |        |        |        |         |
++===========================================================================================================================================+
+| Deployment Cost                                                                    | Deployment Size |        |        |        |         |
+|------------------------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| 13958493                                                                           | 63561           |        |        |        |         |
+|------------------------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+|                                                                                    |                 |        |        |        |         |
+|------------------------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| Function Name                                                                      | Min             | Avg    | Median | Max    | # Calls |
+|------------------------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| externalCall                                                                       | 207943          | 286376 | 286376 | 364809 | 2       |
+╰------------------------------------------------------------------------------------+-----------------+--------+--------+--------+---------╯
+
+╭---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------╮
+| test/unit/OnitInfiniteOutcomeDPMOutcomeDomain/OnitInfiniteOutcomeDPMOutcomeDomain.t.sol:OnitInfiniteOutcomeDPMOutcomeDomainHarness Contract |                 |       |        |        |         |
++===================================================================================================================================================================================================+
+| Deployment Cost                                                                                                                             | Deployment Size |       |        |        |         |
+|---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------|
+| 726351                                                                                                                                      | 3151            |       |        |        |         |
+|---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------|
+|                                                                                                                                             |                 |       |        |        |         |
+|---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------|
+| Function Name                                                                                                                               | Min             | Avg   | Median | Max    | # Calls |
+|---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------|
+| bucketIdToPackedPosition                                                                                                                    | 446             | 504   | 504    | 562    | 8       |
+|---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------|
+| bucketOutstandingPackedShares                                                                                                               | 2519            | 2519  | 2519   | 2519   | 12      |
+|---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------|
+| getBalanceOfShares                                                                                                                          | 2747            | 2747  | 2747   | 2747   | 15      |
+|---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------|
+| getBucketId                                                                                                                                 | 2632            | 2643  | 2632   | 2657   | 19      |
+|---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------|
+| getBucketOutstandingShares                                                                                                                  | 2618            | 2618  | 2618   | 2618   | 16      |
+|---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------|
+| getOutstandingSharesInBucketRange                                                                                                           | 7055            | 7066  | 7066   | 7078   | 2       |
+|---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------|
+| initialize                                                                                                                                  | 43598           | 43598 | 43598  | 43598  | 16      |
+|---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------|
+| updateHoldings                                                                                                                              | 28562           | 67321 | 70532  | 120200 | 16      |
+╰---------------------------------------------------------------------------------------------------------------------------------------------+-----------------+-------+--------+--------+---------╯
+
+╭--------------------------------------------------------------------------+-----------------+------+--------+------+---------╮
+| test/unit/OnitMarketResolver/ResolverTest.t.sol:MockOnitFactory Contract |                 |      |        |      |         |
++=============================================================================================================================+
+| Deployment Cost                                                          | Deployment Size |      |        |      |         |
+|--------------------------------------------------------------------------+-----------------+------+--------+------+---------|
+| 345623                                                                   | 1409            |      |        |      |         |
+|--------------------------------------------------------------------------+-----------------+------+--------+------+---------|
+|                                                                          |                 |      |        |      |         |
+|--------------------------------------------------------------------------+-----------------+------+--------+------+---------|
+| Function Name                                                            | Min             | Avg  | Median | Max  | # Calls |
+|--------------------------------------------------------------------------+-----------------+------+--------+------+---------|
+| owner                                                                    | 2305            | 2305 | 2305   | 2305 | 3       |
+╰--------------------------------------------------------------------------+-----------------+------+--------+------+---------╯
+
+╭-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------╮
+| test/unit/OnitMarketResolver/ResolverTest.t.sol:TestResolver Contract |                 |        |        |        |         |
++==============================================================================================================================+
+| Deployment Cost                                                       | Deployment Size |        |        |        |         |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| 574709                                                                | 2459            |        |        |        |         |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+|                                                                       |                 |        |        |        |         |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| Function Name                                                         | Min             | Avg    | Median | Max    | # Calls |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| initialize                                                            | 22517           | 110361 | 134279 | 134279 | 14      |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| isResolver                                                            | 4670            | 6144   | 6861   | 6903   | 3       |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| marketVoided                                                          | 2529            | 2529   | 2529   | 2529   | 1       |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| onitFactory                                                           | 2459            | 2459   | 2459   | 2459   | 1       |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| resolvedBucketId                                                      | 2476            | 2476   | 2476   | 2476   | 2       |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| resolvedOutcome                                                       | 2300            | 2300   | 2300   | 2300   | 2       |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| setResolvedOutcome                                                    | 28055           | 66271  | 94374  | 94374  | 7       |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| updateResolvedOutcome                                                 | 28168           | 35446  | 32508  | 45664  | 3       |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| voidMarket                                                            | 28674           | 44096  | 51807  | 51807  | 3       |
+|-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------|
+| withdrawlDelayPeriod                                                  | 2278            | 2278   | 2278   | 2278   | 2       |
+╰-----------------------------------------------------------------------+-----------------+--------+--------+--------+---------╯
+
+╭---------------------------------------------------------------------------------------+-----------------+--------+--------+---------+---------╮
+| test/utils/GenerateTestShareDistributions.sol:GenerateTestShareDistributions Contract |                 |        |        |         |         |
++===============================================================================================================================================+
+| Deployment Cost                                                                       | Deployment Size |        |        |         |         |
+|---------------------------------------------------------------------------------------+-----------------+--------+--------+---------+---------|
+| 1799580                                                                               | 8396            |        |        |         |         |
+|---------------------------------------------------------------------------------------+-----------------+--------+--------+---------+---------|
+|                                                                                       |                 |        |        |         |         |
+|---------------------------------------------------------------------------------------+-----------------+--------+--------+---------+---------|
+| Function Name                                                                         | Min             | Avg    | Median | Max     | # Calls |
+|---------------------------------------------------------------------------------------+-----------------+--------+--------+---------+---------|
+| generateNormalDistribution                                                            | 104469          | 538029 | 552699 | 1004069 | 1450    |
+╰---------------------------------------------------------------------------------------+-----------------+--------+--------+---------+---------╯
+
+
+Ran 27 test suites in 7.05s (12.06s CPU time): 244 tests passed, 0 failed, 0 skipped (244 total tests)

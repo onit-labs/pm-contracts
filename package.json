@@ -1,0 +1,59 @@
+{
+  "name": "@onit/pm-contracts",
+  "version": "0.0.4-beta",
+  "type": "module",
+  "author": {
+    "name": "Onit Labs",
+    "url": "https://github.com/onit-labs"
+  },
+  "dependencies": {
+    "@prb/math": "4.1.0",
+    "solady": "0.1.26"
+  },
+  "devDependencies": {
+    "@solidity-parser/parser": "^0.20.2",
+    "@wagmi/cli": "^2.1.22",
+    "forge-std": "github:foundry-rs/forge-std#v1.9.7",
+    "glob": "^11.0.3",
+    "pdf-lib-sol": "github:jamesmccomish/pdf-lib-sol#91aa985",
+    "prettier": "^3.0.0",
+    "solhint": "^3.6.2",
+    "viem": "^2.21.58",
+    "vitest": "^3.2.4"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "smart-contracts",
+    "solidity",
+    "prediction-market"
+  ],
+  "private": true,
+  "scripts": {
+    "anvil": "./dev/anvil.sh",
+    "benchmarks": "forge test --via-ir --gas-report > test/benchmarks/gas-report.txt ; forge build --via-ir --sizes > ./test/benchmarks/contract-sizes.txt ; forge snapshot > ./test/benchmarks/.gas-snapshot --via-ir",
+    "build": "FOUNDRY_PROFILE=prod forge build",
+    "build:mappings": "bun dev/events/generate-event-mappings.ts",
+    "clean": "rm -rf cache out",
+    "deploy:base": "node dev/deploy.ts base -p",
+    "deploy:base_sepolia": "node dev/deploy.ts base_sepolia -p",
+    "deploy:local": "node dev/deploy.ts local -p -b",
+    "lint": "bun run lint:sol && bun run prettier:check",
+    "lint:sol": "forge fmt --check && bun solhint \"{script,src,test}/**/*.sol\"",
+    "postbuild": "bun run build:mappings",
+    "prettier:check": "prettier --check \"**/*.{json,md,yml}\" --ignore-path \".prettierignore\"",
+    "prettier:write": "prettier --write \"**/*.{json,md,yml}\" --ignore-path \".prettierignore\"",
+    "test": "./dev/test.sh",
+    "test:all": "forge test",
+    "test:coverage": "forge coverage",
+    "test:coverage:report": "forge coverage --report lcov && genhtml lcov.info --branch-coverage --output-dir coverage",
+    "test:mappings": "vitest --run dev/events/__tests__"
+  },
+  "engines": {
+    "node": "23.10.0"
+  },
+  "volta": {
+    "node": "23.10.0"
+  },
+  "packageManager": "bun@1.1.38"
+}

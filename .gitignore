@@ -1,0 +1,24 @@
+# Compiler files
+cache/
+out/
+
+# Ignores development broadcast logs (except specific run-latest.json files)
+/broadcast/**/*
+!/broadcast/DeployFactory.s.sol/
+!/broadcast/DeployFactory.s.sol/*/
+!/broadcast/DeployFactory.s.sol/*/run-latest.json
+!/broadcast/DeployOrderRouter.s.sol/
+!/broadcast/DeployOrderRouter.s.sol/*/
+!/broadcast/DeployOrderRouter.s.sol/*/run-latest.json
+
+# Docs
+docs/
+
+# Dotenv file
+.env
+
+# Test output
+test/outputs
+
+# Packages
+node_modules/ 
