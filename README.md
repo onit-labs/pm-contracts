@@ -8,10 +8,10 @@ Onit is a prediction market protocol which uses an 'Infinite Outcome Dynamic Par
 ### Dynamic Pari-Mutuel Market
 Pari-Mutuel markets are markets where funds are redistributed from some traders to others, they are common in sports betting where winners split a pot funded by all bettors. They benefit from 'infinite liquidity' meaning that you can make a bet at any point without waiting for someone to take the other side (like in order books). Their downside is that for events where information arrives over time, there is limited incentive to bet until immediately before the event.
 
-[Dynamic pari-mutuel markets](http://dpennock.com/papers/pennock-ec-2004-dynamic-parimutuel.pdf) (DPMs) relate the price of an outcome to the relative demand of each outcome at any moment with a price function. This incentivies traders to bet early as they expect their option to increase in price if correct.
+[Dynamic pari-mutuel markets](http://dpennock.com/papers/pennock-ec-2004-dynamic-parimutuel.pdf) (DPMs) relate the price of an outcome to the relative demand of each outcome at any moment with a price function. This incentivises traders to bet early as they expect their option to increase in price if correct.
 
 ### Infinite Outcome
-The [Infinite Outcome DPM](https://www.cs.toronto.edu/~axgao/papers/interval-WINE09.pdf) is simply a DPM where securities are created on the fly as particular outcomes come into demand. This means that there is no need to pre define options or ranges. This enables betting on any event that can be represented with countabley infinite outcomes on the real number line.
+The [Infinite Outcome DPM](https://www.cs.toronto.edu/~axgao/papers/interval-WINE09.pdf) is simply a DPM where securities are created on the fly as particular outcomes come into demand. This means that there is no need to pre define options or ranges. This enables betting on any event that can be represented with countably infinite outcomes on the real number line.
 
 
 ### Cost Function
@@ -28,7 +28,7 @@ $$C_i(q) = k \cdot \sqrt{\sum q_j^2}$$
 Where $k$ is a constant, $q_j$ represents the quantity of shares for outcome $j$.
  
 #### Price Function
-$$p_i(q) = \frac{q_i}{k \cdot \sqrt{\sum q_j^2}}$$
+$$p_i(q) = \frac{k \cdot q_i}{\sqrt{\sum q_j^2}}$$
 
 Where $p_i(q)$ is the price of outcome $i$ given the current state $q$. 
 
